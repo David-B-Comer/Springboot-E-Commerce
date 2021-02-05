@@ -1,3 +1,8 @@
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {ProductsComponent} from "./products/products.component";
+import {ShoppingCartComponent} from "./shopping-cart/shopping-cart.component";
+import {OrdersComponent} from "./orders/orders.component";
+
 @Component({
 selector: 'app-ecommerce',
 templateUrl: './ecommerce.component.html',
@@ -16,7 +21,13 @@ shoppingCartC: ShoppingCartComponent;
 @ViewChild('ordersC')
 ordersC: OrdersComponent;
 
-toggleCollapsed(): void {
+constructor() {
+    }
+
+    ngOnInit() {
+    }
+
+    toggleCollapsed(): void {
         this.collapsed = !this.collapsed;
     }
 
